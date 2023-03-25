@@ -1,0 +1,1 @@
+nohup python main.py -p $1 -i 10 -d > /dev/null 2>&1 & echo $! > pidfile
