@@ -108,7 +108,7 @@ if __name__=='__main__':
     if not args.d:
         status = get_program_status(args.pid)
         if status is None:
-            send_email_notify(email["username"],email["password"],email["emails"], "进程 {} 执行结束", "监控结束")
+            send_email_notify(email["username"],email["password"],email["emails"], "进程 {} 执行结束".format(args.pid), "监控结束")
     else:
         event = multiprocessing.Event()
         try:
